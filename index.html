@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RelayPing – Google Chat notifications for Jira</title>
+<meta name="description" content="Send the Jira updates that matter to the right Google Chat space. Filter by project, event and status, and keep every issue in its own thread.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="./">RelayPing</a>
+  <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">For Jira Cloud teams on Google Workspace</p>
+    <h1>The Jira updates that matter, in the right Google Chat space.</h1>
+    <p class="lead">RelayPing connects Jira Cloud to Google Chat. Pick the projects, events and statuses you care about, and each issue's updates stay together in one thread instead of flooding the room.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card"><h2>Rules, not noise</h2><p>Choose projects and events: issue created, assignee changed, status changed, new comment, mentions.</p></div>
+    <div class="card"><h2>Only the statuses you need</h2><p>Notify a space only when work reaches “In Review” or “Done”, for example.</p></div>
+    <div class="card"><h2>One thread per issue</h2><p>Every update of an issue lands in the same Google Chat thread, so conversations stay readable.</p></div>
+    <div class="card"><h2>Two-minute setup</h2><p>Create a webhook in your Google Chat space, paste it into RelayPing in Jira settings, send a test message. Done.</p></div>
+  </section>
+
+  <section>
+    <h2>How to set it up</h2>
+    <ol class="steps">
+      <li>In Google Chat, open a space → <b>Apps &amp; integrations</b> → <b>Webhooks</b> → <b>Add webhook</b>, and copy the URL.</li>
+      <li>In Jira, go to <b>Settings → Apps → Google Chat Notifications</b> and click <b>Add rule</b>.</li>
+      <li>Paste the URL, choose projects and events, and click <b>Send test message</b>.</li>
+    </ol>
+    <p class="note">Google Chat webhooks require a Google Workspace Business or Enterprise account, and your Workspace admin must allow incoming webhooks.</p>
+  </section>
+</main>
+<footer class="wrap"><p>RelayPing is an independent app and is not affiliated with Google or Atlassian. Google Chat is a trademark of Google LLC. Jira is a trademark of Atlassian.</p></footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – RelayPing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="./">RelayPing</a>
+  <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+</header>
+<main class="wrap doc">
+  <h1>Privacy Policy</h1>
+  <p class="note">Effective date: 14 November 2026</p>
+
+  <p>This policy explains how the RelayPing app for Jira Cloud (“the app”, “we”) handles data. The app is published by Yasin Özçelik, Istanbul, Türkiye.</p>
+
+  <h2>1. Where the app runs</h2>
+  <p>The app is built on Atlassian Forge and runs on Atlassian's infrastructure. We do not operate our own servers or databases, and we do not receive copies of your Jira data.</p>
+
+  <h2>2. Data the app processes</h2>
+  <p>When a Jira event matches a rule you configured, the app reads the issue's key, summary, status, priority, project, assignee display name, the display name of the person who made the change, and, for comment events, the beginning of the comment text (up to 500 characters). It uses this only to build the notification message.</p>
+
+  <h2>3. Data the app stores</h2>
+  <p>The app stores, in Atlassian Forge storage within your Jira site: the notification rules you create (name, projects, event types, status filters, options) and the Google Chat webhook URL for each rule. Webhook URLs are kept in Forge's encrypted secret storage. The app also caches your site's base URL. Deleting a rule deletes its stored data; uninstalling the app removes the app's storage according to Atlassian's data retention rules.</p>
+
+  <h2>4. Data shared with third parties</h2>
+  <p>The notification message described in section 2 is sent only to the Google Chat webhook URLs that a Jira administrator entered. Google processes that message under your organization's agreement with Google. The app sends data to no other destination, and we do not sell or share data with anyone.</p>
+
+  <h2>5. Analytics and tracking</h2>
+  <p>The app uses no analytics, advertising or tracking tools. Atlassian may keep operational logs of the app's functions under Atlassian's own policies.</p>
+
+  <h2>6. Your choices</h2>
+  <p>Jira administrators can view, change or delete rules at any time in Jira settings, and can uninstall the app at any time.</p>
+
+  <h2>7. Changes</h2>
+  <p>If this policy changes, we will update this page and its effective date.</p>
+
+  <h2>8. Contact</h2>
+  <p>Questions about privacy: open a request on our <a href="support.html">support page</a>.</p>
+</main>
+<footer class="wrap"><p>RelayPing is an independent app and is not affiliated with Google or Atlassian.</p></footer>
+</body>
+</html>

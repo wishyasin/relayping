@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support – RelayPing</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="./">RelayPing</a>
+  <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+</header>
+<main class="wrap doc">
+  <h1>Support</h1>
+  <p>Need help, found a bug, or want a feature? <a href="https://github.com/wishyasin/relayping/issues/new">Open a request</a>. We usually reply within two business days (Monday–Friday, 09:00–17:00 Istanbul time, UTC+3). Please do not paste webhook URLs in public requests: they contain a secret token.</p>
+
+  <h2>Common questions</h2>
+  <h3>The test message does not arrive</h3>
+  <p>Check that the webhook URL starts with <code>https://chat.googleapis.com/v1/spaces/</code> and that your Google Workspace admin allows incoming webhooks. Webhooks need a Google Workspace Business or Enterprise account.</p>
+
+  <h3>I get too many notifications</h3>
+  <p>Edit the rule: limit it to certain projects, remove events, or set target statuses (for example “Done”) so only those status changes are sent.</p>
+
+  <h3>Can each issue have its own thread?</h3>
+  <p>Yes. “Keep all updates of an issue in one thread” is on by default.</p>
+
+  <h3>Can I send direct messages to individual people?</h3>
+  <p>Not yet. Messages go to Google Chat spaces through webhooks. Personal notifications are on our roadmap.</p>
+</main>
+<footer class="wrap"><p>RelayPing is an independent app and is not affiliated with Google or Atlassian.</p></footer>
+</body>
+</html>
