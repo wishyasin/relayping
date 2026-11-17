@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security – RelayPing</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/logo-144.png" type="image/png">
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="./"><img src="assets/logo-144.png" alt="" width="32" height="32" style="vertical-align:middle;margin-right:10px;border-radius:8px">RelayPing</a>
+  <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security.html">Security</a><a href="support.html">Support</a></nav>
+</header>
+<main class="wrap doc">
+  <h1>Security &amp; incident response</h1>
+  <p>Last updated: November 17, 2026</p>
+
+  <h2>Report a vulnerability</h2>
+  <p>Email <a href="mailto:relayping.support@gmail.com?subject=Security">relayping.support@gmail.com</a> with the subject “Security”. Please do not report vulnerabilities in public GitHub issues. We acknowledge reports within two business days and keep you updated until the issue is resolved.</p>
+
+  <h2>How RelayPing is built</h2>
+  <ul>
+    <li>RelayPing runs on Atlassian Forge. Code runs and data is stored on Atlassian's infrastructure; we operate no servers of our own.</li>
+    <li>The only secret we store is each rule's Google Chat webhook URL, kept in Forge's encrypted secret storage. It is never logged and is never shown again after it is saved.</li>
+    <li>Issue content is read only to build a notification and is sent only to <code>chat.googleapis.com</code>. We do not store issue content.</li>
+    <li>Source code access is protected with multi-factor authentication, and the development machine uses full-disk encryption.</li>
+  </ul>
+
+  <h2>Incident response plan</h2>
+  <p>A security incident is any event that may expose customer data or let someone misuse the app, for example a leaked webhook URL, a vulnerability in our code or a dependency, or unauthorized access to our developer accounts.</p>
+  <ol>
+    <li><strong>Detect &amp; record.</strong> Incidents may come from a report, an Atlassian security notice, a dependency alert, or app logs. We open a private record with the time, source and what is known.</li>
+    <li><strong>Assess severity.</strong> We rate the issue (critical, high, medium, low) using CVSS and decide whether customer data is affected.</li>
+    <li><strong>Contain.</strong> Depending on the issue we deploy a fix or roll back, disable the affected feature, revoke and rotate credentials, and lock affected accounts.</li>
+    <li><strong>Notify.</strong> For a security incident we open a P1 ticket in Atlassian's Developer and Marketplace Support portal within 24 hours and send Atlassian updates at least every 6 hours until it is contained, following Atlassian's <a href="https://developer.atlassian.com/platform/marketplace/app-security-incident-management-guidelines/">incident management guidelines</a>. Vulnerabilities are fixed within the timelines of the <a href="https://developer.atlassian.com/platform/marketplace/security-bugfix-policy/">Security Bug Fix Policy</a>. If customer data is affected, we notify affected customers without undue delay, and no later than 72 hours after confirming it, with what happened, what data was involved and what they should do (for example, delete and recreate a Google Chat webhook).</li>
+    <li><strong>Fix &amp; verify.</strong> We release a fix, confirm it works, and check that no other installations are affected.</li>
+    <li><strong>Review.</strong> We write down the cause and the steps that prevent it from happening again.</li>
+  </ol>
+
+  <h2>What you can do</h2>
+  <p>If you think a webhook URL has leaked, delete the webhook in Google Chat, create a new one, and update the rule in Jira under Apps → RelayPing – Google Chat. The old URL stops working right away.</p>
+</main>
+<footer class="wrap"><p>RelayPing is an independent app and is not affiliated with Google or Atlassian.</p></footer>
+</body>
+</html>
